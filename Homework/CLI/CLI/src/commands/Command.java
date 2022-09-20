@@ -21,8 +21,16 @@ public abstract class Command {
 
     private void readParams() {
         Stack stack = getStack();
-        for (int i = 0; i < getParamsCount() && stack.hasNext(); i++) {
-            params.add(stack.get());
+
+        if (getParamsCount() != -1) {
+            for (int i = 0; i < getParamsCount() && stack.hasNext(); i++) {
+                params.add(stack.get());
+            }
+        } else {
+            while (stack.hasNext()) {
+                String param = stack.get();
+                params.add(param);
+            }
         }
     }
 }
