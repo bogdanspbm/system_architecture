@@ -1,6 +1,10 @@
 package commands;
 
 public class CommandExit extends Command {
+    public CommandExit(String name) {
+        super(name);
+    }
+
     @Override
     public void execute() {
         System.exit(0);

@@ -1,6 +1,10 @@
 package commands;
 
 public class CommandEcho extends Command {
+    public CommandEcho(String name) {
+        super(name);
+    }
+
     @Override
     public void execute() {
         StringBuffer result = new StringBuffer();

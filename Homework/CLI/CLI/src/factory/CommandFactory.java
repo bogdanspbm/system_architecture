@@ -6,24 +6,24 @@ public class CommandFactory {
     public Command createCommand(String name) {
         switch (name) {
             case "cat": {
-                return new CommandCat();
+                return new CommandCat(name);
             }
             case "echo": {
-                return new CommandEcho();
+                return new CommandEcho(name);
             }
             case "wc": {
-                return new CommandWC();
+                return new CommandWC(name);
             }
             case "pwd": {
-                return new CommandPWD();
+                return new CommandPWD(name);
             }
             case "ls": {
-                return new CommandLS();
+                return new CommandLS(name);
             }
             case "exit": {
-                return new CommandExit();
+                return new CommandExit(name);
             }
         }
-        return new CommandNull();
+        return new CommandOut(name);
     }
 }

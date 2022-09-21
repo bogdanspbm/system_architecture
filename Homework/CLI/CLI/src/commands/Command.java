@@ -9,9 +9,11 @@ import static utils.Stack.getStack;
 
 public abstract class Command {
 
+    String name = "";
     List<String> params = new ArrayList<>();
 
-    public Command() {
+    public Command(String name) {
+        this.name = name;
         readParams();
     }
 

@@ -5,6 +5,10 @@ import global.SharedVariables;
 import java.io.File;
 
 public class CommandLS extends Command {
+    public CommandLS(String name) {
+        super(name);
+    }
+
     @Override
     public void execute() {
         File dir = new File(SharedVariables.curPath);

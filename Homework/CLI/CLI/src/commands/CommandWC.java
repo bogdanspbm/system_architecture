@@ -7,6 +7,10 @@ import java.io.File;
 import java.util.List;
 
 public class CommandWC extends Command {
+    public CommandWC(String name) {
+        super(name);
+    }
+
     @Override
     public void execute() {
         if (params.size() == 1) {
