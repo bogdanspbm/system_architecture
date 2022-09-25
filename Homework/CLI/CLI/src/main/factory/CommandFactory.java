@@ -1,6 +1,6 @@
-package factory;
+package main.factory;
 
-import commands.*;
+import main.commands.*;
 
 public class CommandFactory {
     public Command createCommand(String name) {

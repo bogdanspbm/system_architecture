@@ -1,11 +1,11 @@
-package utils;
+package main.utils;
 
-import commands.Command;
-import factory.CommandFactory;
+import main.commands.Command;
+import main.factory.CommandFactory;
 
 import java.util.Scanner;
 
-import static utils.Stack.getStack;
+import static main.utils.Stack.getStack;
 
 public class Reader {
 

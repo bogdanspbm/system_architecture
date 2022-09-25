@@ -1,4 +1,4 @@
-package commands;
+package main.commands;
 
 public class CommandEcho extends Command {
     public CommandEcho(String name) {
@@ -7,6 +7,11 @@ public class CommandEcho extends Command {
 
     @Override
     public void execute() {
+        System.out.println(buildOutput());
+    }
+
+    @Override
+    public String buildOutput() {
         StringBuffer result = new StringBuffer();
         for (int i = 0; i < params.size(); i++) {
             String param = params.get(i);
@@ -15,7 +20,7 @@ public class CommandEcho extends Command {
                 result.append(" ");
             }
         }
-        System.out.println(result.toString());
+        return result.toString();
     }
 
     @Override

@@ -1,7 +1,7 @@
-package commands;
+package main.commands;
 
-import global.GlobalFunctions;
-import global.SharedVariables;
+import main.global.GlobalFunctions;
+import main.global.SharedVariables;
 
 import java.io.File;
 import java.util.List;
@@ -13,16 +13,24 @@ public class CommandCat extends Command {
 
     @Override
     public void execute() {
+        System.out.println(buildOutput());
+    }
+
+    @Override
+    public String buildOutput() {
+        StringBuilder result = new StringBuilder();
         if (params.size() == 1) {
             String fileName = params.get(0);
-            File file = new File(SharedVariables.curPath + "/" + fileName);
+            File file = new File(SharedVariables.getCurPath() + "/" + fileName);
             if (file.exists()) {
                 List<String> content = GlobalFunctions.getFileContent(file);
                 for (String line : content) {
-                    System.out.println(line);
+                    result.append(line);
+                    result.append("\n");
                 }
             }
         }
+        return result.toString();
     }
 
     @Override

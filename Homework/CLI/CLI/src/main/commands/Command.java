@@ -1,11 +1,11 @@
-package commands;
+package main.commands;
 
-import utils.Stack;
+import main.utils.Stack;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static utils.Stack.getStack;
+import static main.utils.Stack.getStack;
 
 public abstract class Command {
 
@@ -18,6 +18,8 @@ public abstract class Command {
     }
 
     public abstract void execute();
+
+    public abstract String buildOutput();
 
     public abstract int getParamsCount();
 
