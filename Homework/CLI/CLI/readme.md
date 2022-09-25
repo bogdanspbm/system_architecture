@@ -21,3 +21,7 @@ javac -d bin @sources.txt
 ```
 java -cp bin main/java/Main
 ```
+
+### Состав команды
+- Маджуга Богдан
+- Дягилев Михаил
