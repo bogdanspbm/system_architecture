@@ -25,9 +25,11 @@ public class CommandWC extends Command {
                 List<String> content = GlobalFunctions.getFileContent(file);
                 int wordsCount = GlobalFunctions.getWordsCount(content);
                 return content.size() + " " + wordsCount + " " + file.length() + " ";
+            } else {
+                return "File doesn't exist";
             }
         }
-        return "";
+        return "Wrong argument";
     }
 
     @Override

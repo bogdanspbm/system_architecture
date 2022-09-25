@@ -84,10 +84,11 @@ public class CommandTest extends Assert {
         assert lines[1].equals("да выпей чаю");
 
         stack.put("bad.txt");
-
         CommandCat commandB = new CommandCat("cat");
+        assert commandB.buildOutput().equals("File doesn't exist");
 
-        assert commandB.buildOutput().equals("");
+        CommandCat commandC = new CommandCat("cat");
+        assert commandC.buildOutput().equals("Wrong argument");
     }
 
     @Test
@@ -105,9 +106,10 @@ public class CommandTest extends Assert {
         assert lines[2].equals("96");
 
         stack.put("bad.txt");
-
         CommandWC commandB = new CommandWC("wc");
+        assert commandB.buildOutput().equals("File doesn't exist");
 
-        assert commandB.buildOutput().equals("");
+        CommandWC commandC = new CommandWC("cat");
+        assert commandC.buildOutput().equals("Wrong argument");
     }
 }

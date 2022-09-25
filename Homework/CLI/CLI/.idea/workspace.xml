@@ -105,7 +105,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CommandTest.testPWDCommand" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CommandTest.testWCCommand" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CLI" />
       <extension name="coverage">
         <pattern>
@@ -115,7 +115,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="test.java" />
       <option name="MAIN_CLASS_NAME" value="test.java.CommandTest" />
-      <option name="METHOD_NAME" value="testPWDCommand" />
+      <option name="METHOD_NAME" value="testWCCommand" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -124,10 +124,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.CommandTest" />
+        <item itemvalue="JUnit.CommandTest.testWCCommand" />
         <item itemvalue="JUnit.CommandTest.testCatCommand" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.CommandTest.testLSCommand" />
-        <item itemvalue="JUnit.CommandTest.testPWDCommand" />
       </list>
     </recent_temporary>
   </component>
@@ -142,7 +142,7 @@
       <workItem from="1663585697036" duration="7240000" />
       <workItem from="1663664437423" duration="395000" />
       <workItem from="1664103452513" duration="6000" />
-      <workItem from="1664103485754" duration="5239000" />
+      <workItem from="1664103485754" duration="5894000" />
     </task>
     <servers />
   </component>

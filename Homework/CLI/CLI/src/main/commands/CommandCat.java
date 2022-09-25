@@ -28,7 +28,11 @@ public class CommandCat extends Command {
                     result.append(line);
                     result.append("\n");
                 }
+            } else {
+                result.append("File doesn't exist");
             }
+        } else {
+            result.append("Wrong argument");
         }
         return result.toString();
     }
