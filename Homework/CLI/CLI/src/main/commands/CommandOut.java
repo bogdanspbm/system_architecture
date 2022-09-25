@@ -25,14 +25,20 @@ public class CommandOut extends Command {
                 command.append(" ");
             }
         }
+
+
         try {
+            StringBuilder result = new StringBuilder();
             Process p = Runtime.getRuntime().exec(command.toString());
             BufferedReader in = new BufferedReader(new InputStreamReader(p.getInputStream()));
-            String ret = in.readLine();
-            return ret;
+            for (String line : in.lines().toList()) {
+                result.append(line);
+                result.append("\n");
+            }
+            return result.toString();
         } catch (Exception e) {
+            return e.toString();
         }
-        return "";
     }
 
 

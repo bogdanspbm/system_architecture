@@ -40,11 +40,11 @@ public class CommandTest extends Assert {
 
         stack.put("main.py");
         CommandOut commandA = new CommandOut("python");
-        assert commandA.buildOutput().equals("Hello world!");
+        assert commandA.buildOutput().equals("Hello world!\n");
 
         stack.put("test.py");
         CommandOut commandB = new CommandOut("python");
-        assertNull(commandB.buildOutput());
+        assert commandB.buildOutput().equals("");
     }
 
     @Test
