@@ -1,14 +1,14 @@
-package test.java;
 
-import main.commands.*;
-import main.global.SharedVariables;
-import main.utils.Stack;
+
+import commands.*;
 import org.junit.Assert;
 import org.junit.Test;
+import utils.Stack;
 
 import java.io.File;
 
-import static main.utils.Stack.getStack;
+import static utils.Stack.getStack;
+
 
 public class CommandTest extends Assert {
 
