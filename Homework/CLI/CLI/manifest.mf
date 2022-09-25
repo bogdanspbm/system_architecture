@@ -1,0 +1,2 @@
+main-class: main.java.Main
+class-path: bin/
