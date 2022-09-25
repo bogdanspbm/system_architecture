@@ -38,7 +38,7 @@
       <recent name="D:\Projects\system_architecture\Homework\CLI\CLI\src\main\java" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.CommandTest.testWCCommand">
     <configuration name="CommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CLI" />
       <option name="PACKAGE_NAME" value="" />
@@ -48,8 +48,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CommandTest.testWCCommand" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CLI" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CommandTest" />
+      <option name="METHOD_NAME" value="testWCCommand" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CommandTest.testWCCommand" />
         <item itemvalue="JUnit.CommandTest" />
       </list>
     </recent_temporary>
@@ -62,7 +73,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1664126679544</updated>
-      <workItem from="1664126681449" duration="1368000" />
+      <workItem from="1664126681449" duration="1840000" />
     </task>
     <servers />
   </component>
