@@ -3,6 +3,8 @@ package main.factory;
 import main.commands.*;
 
 public class CommandFactory {
+
+    // Фактори возрващающий экземпляр команды, построенной по строковому ключу
     public Command createCommand(String name) {
         switch (name) {
             case "cat": {

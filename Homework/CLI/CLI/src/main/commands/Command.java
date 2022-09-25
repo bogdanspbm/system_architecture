@@ -17,10 +17,15 @@ public abstract class Command {
         readParams();
     }
 
+    // Абстрактный метод вызова команды
     public abstract void execute();
 
+    // Абстрактный метод, генерирующий строковой вывод исполнения команды
     public abstract String buildOutput();
 
+    // Абстрактный метод, возвращающий количество параметров, которое требуется для исполнения команды
+    // -1 - любое количество
+    // 0 - inf - точное количество
     public abstract int getParamsCount();
 
     private void readParams() {
