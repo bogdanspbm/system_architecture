@@ -1,4 +1,4 @@
-./src/main/java/main.java
+./src/main/java/Main.java
 ./src/main/commands/Command.java
 ./src/main/commands/CommandCat.java
 ./src/main/commands/CommandEcho.java
