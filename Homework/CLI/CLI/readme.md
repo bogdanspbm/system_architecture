@@ -19,7 +19,7 @@ javac -d bin @sources.txt
 
 2. Запуск из консоли
 ```
-java -cp bin main/java/Main
+java -cp bin Main
 ```
 
 ### Состав команды
