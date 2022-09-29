@@ -28,4 +28,9 @@ public class CommandFactory {
         }
         return new CommandOut(name);
     }
+
+    private boolean isAssigment(String str) {
+        
+        return false;
+    }
 }
