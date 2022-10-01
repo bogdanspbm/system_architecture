@@ -25,12 +25,22 @@ public class CommandFactory {
             case "exit": {
                 return new CommandExit(name);
             }
+            default:{
+                if(isAssigment(name)){
+                return new CommandAssign(name);
+                }
+            }
         }
         return new CommandOut(name);
     }
 
     private boolean isAssigment(String str) {
-        
+
+        // Нужно переписать логику более похоже на bash
+        if(str.contains("=") && !str.contains(" = ")){
+            return true;
+        }
+
         return false;
     }
 }

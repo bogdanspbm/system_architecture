@@ -6,6 +6,14 @@ public class Parser {
     // В первой версии по пробелам
     // В будущей версии также будет учтен другой синтаксис
     public static String[] parse(String line) {
-        return line.split(" ");
+        String[] words = line.split(" ");
+
+
+
+        for(int i = 0; i < words.length;i++){
+            words[i] = VariableStorage.getStorage().replaceKeys(words[i]);
+        }
+
+        return words;
     }
 }

@@ -1,6 +1,11 @@
 package commands;
 
+import global.GlobalFunctions;
+import utils.VariableStorage;
+
 public class CommandAssign extends Command {
+
+    String key = "";
 
     public CommandAssign(String name) {
         super(name);
@@ -8,12 +13,24 @@ public class CommandAssign extends Command {
 
     @Override
     public void execute() {
-
+        String value = buildOutput();
+        VariableStorage.getStorage().put(key, value);
     }
 
     @Override
     public String buildOutput() {
-        return null;
+        String[] words = this.name.split("=");
+        String value = "";
+
+        key = words[0];
+
+        for(int i = 1; i < words.length;i++){
+            value += words[i];
+        }
+
+        // Тут нужно добавить логику на обработку "" и ''
+
+        return value;
     }
 
     @Override
