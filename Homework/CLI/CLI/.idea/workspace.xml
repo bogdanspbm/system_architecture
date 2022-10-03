@@ -46,7 +46,7 @@
       <recent name="D:\Projects\system_architecture\Homework\CLI\CLI\src\main\java" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CommandTest">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="CLI" />
@@ -75,8 +75,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CommandTest" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.CommandTest" />
         <item itemvalue="JUnit.CommandTest.testWCCommand" />
       </list>
     </recent_temporary>
@@ -91,7 +91,7 @@
       <updated>1664126679544</updated>
       <workItem from="1664126681449" duration="1840000" />
       <workItem from="1664355915476" duration="2687000" />
-      <workItem from="1664797521984" duration="3657000" />
+      <workItem from="1664797521984" duration="4825000" />
     </task>
     <servers />
   </component>
@@ -114,7 +114,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/commands/CommandAssign.java</url>
-          <line>39</line>
+          <line>38</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -133,9 +133,9 @@
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/utils/Parser.java</url>
-          <line>59</line>
-          <option name="timeStamp" value="12" />
+          <url>file://$PROJECT_DIR$/src/main/java/utils/Reader.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

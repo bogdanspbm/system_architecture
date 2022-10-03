@@ -13,7 +13,7 @@ public class CommandLS extends Command {
 
     @Override
     public void hiddenExecute() {
-        System.out.println(buildOutput());
+        print(buildOutput());
     }
 
     @Override

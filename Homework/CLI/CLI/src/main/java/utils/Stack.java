@@ -59,6 +59,10 @@ public class Stack {
         return stack.size() > 0;
     }
 
+    public boolean isNextPipe() {
+        return stack.size() > 0 && stack.get(0).equals("|");
+    }
+
     // Показывает, есть ле еще слова до пайпа
     public boolean hasNextParam() {
         return stack.size() > 0 && !stack.get(0).equals("|");
@@ -72,6 +76,8 @@ public class Stack {
 
         String res = stack.get(0);
         stack.remove(0);
+
+        res = VariableStorage.getStorage().replaceKeys(res);
 
         return res;
     }

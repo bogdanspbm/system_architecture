@@ -23,6 +23,12 @@ public abstract class Command {
         getStack().setLastOutput(buildOutput());
     }
 
+    protected void print(String text) {
+        if (!getStack().isNextPipe()) {
+            System.out.println(text);
+        }
+    }
+
     abstract void hiddenExecute();
 
     // Абстрактный метод, генерирующий строковой вывод исполнения команды

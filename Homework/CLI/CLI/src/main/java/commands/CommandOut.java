@@ -10,7 +10,7 @@ public class CommandOut extends Command {
 
     @Override
     public void hiddenExecute() {
-        System.out.println(buildOutput());
+        print(buildOutput());
     }
 
     @Override
