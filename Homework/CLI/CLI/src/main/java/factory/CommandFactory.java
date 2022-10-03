@@ -25,12 +25,9 @@ public class CommandFactory {
             case "exit": {
                 return new CommandExit(name);
             }
-            case "|": {
-                return new CommandPipe(name);
-            }
-            default: {
-                if (isAssigment(name)) {
-                    return new CommandAssign(name);
+            default:{
+                if(isAssigment(name)){
+                return new CommandAssign(name);
                 }
             }
         }
@@ -38,9 +35,8 @@ public class CommandFactory {
     }
 
     private boolean isAssigment(String str) {
-
         // Нужно переписать логику более похоже на bash
-        if (str.contains("=") && !str.contains(" = ")) {
+        if(str.contains("=") && !str.contains(" = ")){
             return true;
         }
 

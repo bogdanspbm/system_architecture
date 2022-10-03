@@ -59,7 +59,6 @@ public class Parser {
         for (int i = 0; i < words.size(); i++) {
             words.set(i, VariableStorage.getStorage().replaceKeys(words.get(i)));
         }
-
         return words.toArray(new String[0]);
     }
 }
