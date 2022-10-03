@@ -19,8 +19,8 @@ public abstract class Command {
 
     // Абстрактный метод вызова команды
     public void execute() {
-        getStack().setLastOutput(buildOutput());
         hiddenExecute();
+        getStack().setLastOutput(buildOutput());
     }
 
     abstract void hiddenExecute();

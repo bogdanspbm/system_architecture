@@ -91,7 +91,7 @@
       <updated>1664126679544</updated>
       <workItem from="1664126681449" duration="1840000" />
       <workItem from="1664355915476" duration="2687000" />
-      <workItem from="1664797521984" duration="3102000" />
+      <workItem from="1664797521984" duration="3322000" />
     </task>
     <servers />
   </component>
@@ -118,19 +118,19 @@
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/commands/CommandAssign.java</url>
-          <line>34</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/utils/VariableStorage.java</url>
           <line>23</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/utils/Parser.java</url>
-          <line>55</line>
-          <option name="timeStamp" value="8" />
+          <url>file://$PROJECT_DIR$/src/main/java/utils/Stack.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/commands/CommandEcho.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
