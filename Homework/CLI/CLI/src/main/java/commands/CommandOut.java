@@ -37,7 +37,8 @@ public class CommandOut extends Command {
             }
             return result.toString();
         } catch (Exception e) {
-            return e.toString();
+            return "Неизвестная команда: " + name;
+            //return e.toString();
         }
     }
 

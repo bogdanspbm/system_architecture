@@ -28,8 +28,6 @@ public class CommandAssign extends Command {
             value += words[i];
         }
 
-        // Тут нужно добавить логику на обработку "" и ''
-
         return value;
     }
 
