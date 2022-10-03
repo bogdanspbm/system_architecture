@@ -59,6 +59,11 @@ public class Stack {
         return stack.size() > 0;
     }
 
+    // Показывает, есть ле еще слова до пайпа
+    public boolean hasNextParam() {
+        return stack.size() > 0 && !stack.get(0).equals("|");
+    }
+
     // Возвращает значение одного слова из начала стэка, удаляя его
     public String get() {
         if (stack.size() == 0) {

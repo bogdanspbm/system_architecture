@@ -41,7 +41,7 @@ public abstract class Command {
                 params.add(stack.get());
             }
         } else {
-            while (stack.hasNext()) {
+            while (stack.hasNextParam()) {
                 String param = stack.get();
                 params.add(param);
             }
