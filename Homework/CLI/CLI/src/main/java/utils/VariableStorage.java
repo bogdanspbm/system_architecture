@@ -36,7 +36,7 @@ public class VariableStorage {
                 str = str.substring( 1);
             }
 
-        String[] keys = str.split("$");
+        String[] keys = str.split("\\$");
 
         String result = "";
 
