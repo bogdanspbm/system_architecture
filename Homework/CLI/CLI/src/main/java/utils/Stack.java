@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import static utils.STDIn.getSTDIn;
+
 public class Stack {
     private static Stack singleton;
     private List<String> stack = new ArrayList<>();
@@ -23,6 +25,7 @@ public class Stack {
         return singleton;
     }
 
+    // Записывает последний вывод в переменную
     public void setLastOutput(String output) {
         this.lastOutput = output;
     }
@@ -32,22 +35,12 @@ public class Stack {
         stack.add(word);
     }
 
-    private void putPipe(String word) {
-        stack.add(nextPipeIndex() + 1, word);
-    }
-
+    // Сохраняет последний вывод в stdin
     public void pipeLastOutput() {
-        putPipe(lastOutput);
+        getSTDIn().clear();
+        getSTDIn().put(VariableStorage.getStorage().replaceKeys(lastOutput));
     }
 
-    private int nextPipeIndex() {
-        for (int i = 0; i < stack.size(); i++) {
-            if (stack.get(i).equals("|")) {
-                return i;
-            }
-        }
-        return stack.size() - 1;
-    }
 
     // Добавляет массив слов в конец стэка
     public void putArray(String[] word) {
@@ -58,6 +51,7 @@ public class Stack {
     public boolean hasNext() {
         return stack.size() > 0;
     }
+
 
     public boolean isNextPipe() {
         return stack.size() > 0 && stack.get(0).equals("|");
@@ -81,4 +75,5 @@ public class Stack {
 
         return res;
     }
+
 }
