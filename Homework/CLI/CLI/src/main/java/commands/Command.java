@@ -1,5 +1,6 @@
 package commands;
 
+import utils.STDIn;
 import utils.Stack;
 
 import java.util.ArrayList;
@@ -41,10 +42,15 @@ public abstract class Command {
 
     private void readParams() {
         Stack stack = getStack();
+        STDIn stdin = STDIn.getSTDIn();
 
         if (getParamsCount() != -1) {
-            for (int i = 0; i < getParamsCount() && stack.hasNext(); i++) {
+            int i = 0;
+            for (; i < getParamsCount() && stack.hasNext(); i++) {
                 params.add(stack.get());
+            }
+            for (; i < getParamsCount() && stdin.hasNext(); i++) {
+                params.add(stdin.get());
             }
         } else {
             while (stack.hasNextParam()) {
