@@ -40,7 +40,7 @@ public class ParserTest extends Assert {
         String[] parserValidOneQuotesWithSpace = new String[] {"echo"," ",""};
         assertArrayEquals(parserValidOneQuotesWithSpace,parserOneQuotesWithSpace);
 
-        //!!!!!!!!!!!!!!!!!!!
+
         String[] parserTwoQuotesWithoutSpace =  parse(" echo \"\"\"\"");
         String[] parserValidTwoQuotesWithoutSpace = new String[] {"echo", ""};
         assertArrayEquals(parserValidTwoQuotesWithoutSpace,parserTwoQuotesWithoutSpace);
