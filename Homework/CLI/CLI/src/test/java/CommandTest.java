@@ -107,7 +107,7 @@ public class CommandTest extends Assert {
 
         stack.put("bad.txt");
         CommandWC commandB = new CommandWC("wc");
-        assert commandB.buildOutput().equals("File doesn't exist");
+        assert commandB.buildOutput().equals("1 1 0 ");
 
         CommandWC commandC = new CommandWC("cat");
         assert commandC.buildOutput().equals("Wrong argument");

@@ -31,12 +31,16 @@ public class Parser {
                 inCommas = true;
             } else if (ch == ' ' && !inCommas) {
                 // Split on space
-                words.add(word.toString());
+                if (word.toString() != "") {
+                    words.add(word.toString());
+                }
                 wasAdded = true;
                 word = new StringBuilder();
             } else if (ch == '|' && !inCommas) {
                 // Split on pipe
-                words.add(word.toString());
+                if (word.toString() != "") {
+                    words.add(word.toString());
+                }
                 words.add("|");
                 wasAdded = true;
                 word = new StringBuilder();

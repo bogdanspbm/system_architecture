@@ -4,6 +4,7 @@ import global.GlobalFunctions;
 import global.SharedVariables;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.List;
 
 public class CommandWC extends Command {
@@ -26,7 +27,10 @@ public class CommandWC extends Command {
                 int wordsCount = GlobalFunctions.getWordsCount(content);
                 return content.size() + " " + wordsCount + " " + file.length() + " ";
             } else {
-                return "File doesn't exist";
+                List<String> content = new ArrayList<>();
+                content.add(params.get(0));
+                int wordsCount = GlobalFunctions.getWordsCount(content);
+                return content.size() + " " + wordsCount + " " + file.length() + " ";
             }
         }
         return "Wrong argument";
