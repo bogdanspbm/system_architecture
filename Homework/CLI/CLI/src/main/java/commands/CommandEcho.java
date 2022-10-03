@@ -6,7 +6,7 @@ public class CommandEcho extends Command {
     }
 
     @Override
-    public void execute() {
+    public void hiddenExecute() {
         System.out.println(buildOutput());
     }
 

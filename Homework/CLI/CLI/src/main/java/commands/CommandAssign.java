@@ -12,7 +12,8 @@ public class CommandAssign extends Command {
     }
 
     @Override
-    public void execute() {
+    public void hiddenExecute() {
+
         String value = buildOutput();
         VariableStorage.getStorage().put(key, value);
     }

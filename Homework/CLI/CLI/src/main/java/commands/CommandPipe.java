@@ -1,18 +1,21 @@
 package commands;
 
-public class CommandExit extends Command {
-    public CommandExit(String name) {
+import static utils.Stack.getStack;
+
+public class CommandPipe extends Command {
+
+    public CommandPipe(String name) {
         super(name);
     }
 
     @Override
     public void hiddenExecute() {
-        System.exit(0);
+        getStack().pipeLastOutput();
     }
 
     @Override
     public String buildOutput() {
-        return "0";
+        return "";
     }
 
     @Override

@@ -8,6 +8,8 @@ public class Stack {
     private static Stack singleton;
     private List<String> stack = new ArrayList<>();
 
+    private String lastOutput = "";
+
     private Stack() {
 
     }
@@ -21,9 +23,30 @@ public class Stack {
         return singleton;
     }
 
+    public void setLastOutput(String output) {
+        this.lastOutput = output;
+    }
+
     // Добавляет одно слово в конец стэка
     public void put(String word) {
         stack.add(word);
+    }
+
+    private void putPipe(String word) {
+        stack.add(nextPipeIndex() + 1, word);
+    }
+
+    public void pipeLastOutput() {
+        putPipe(lastOutput);
+    }
+
+    private int nextPipeIndex() {
+        for (int i = 0; i < stack.size(); i++) {
+            if (stack.get(i).equals("|")) {
+                return i;
+            }
+        }
+        return stack.size() - 1;
     }
 
     // Добавляет массив слов в конец стэка

@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b1b997ac-74b6-4d89-9232-89b728f569c1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/CommandAssign.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/CommandAssign.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/factory/CommandFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/factory/CommandFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/Parser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/VariableStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/VariableStorage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/factory/CommandFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/factory/CommandFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/utils/Parser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utils/Parser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/CommandTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/CommandTest.class" afterDir="false" />
-    </list>
+    <list default="true" id="b1b997ac-74b6-4d89-9232-89b728f569c1" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,6 +34,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/Projects/system_architecture/Homework/CLI/CLI",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
@@ -82,24 +73,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="CLI" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="CLI" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.CommandTest.testWCCommand" />
         <item itemvalue="JUnit.CommandTest" />
+        <item itemvalue="JUnit.CommandTest.testWCCommand" />
       </list>
     </recent_temporary>
   </component>
@@ -113,6 +91,7 @@
       <updated>1664126679544</updated>
       <workItem from="1664126681449" duration="1840000" />
       <workItem from="1664355915476" duration="2687000" />
+      <workItem from="1664797521984" duration="2780000" />
     </task>
     <servers />
   </component>
@@ -134,24 +113,24 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/utils/Parser.java</url>
-          <line>8</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/commands/CommandAssign.java</url>
-          <line>21</line>
+          <line>39</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/commands/CommandAssign.java</url>
-          <line>16</line>
+          <line>34</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/utils/VariableStorage.java</url>
           <line>23</line>
           <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/utils/Parser.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
