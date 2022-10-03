@@ -28,7 +28,9 @@ public class CommandWC extends Command {
                 return content.size() + " " + wordsCount + " " + file.length() + " ";
             } else {
                 List<String> content = new ArrayList<>();
-                content.add(params.get(0));
+                for (String str : params.get(0).split("\n")) {
+                    content.add(str);
+                }
                 int wordsCount = GlobalFunctions.getWordsCount(content);
                 return content.size() + " " + wordsCount + " " + file.length() + " ";
             }
