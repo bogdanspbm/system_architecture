@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b1b997ac-74b6-4d89-9232-89b728f569c1" name="Changes" comment="test parser change" />
+    <list default="true" id="b1b997ac-74b6-4d89-9232-89b728f569c1" name="Changes" comment="test parser change">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PipeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PipeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utils/STDIn.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utils/STDIn.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utils/Stack.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utils/Stack.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utils/VariableStorage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utils/VariableStorage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/PipeTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/PipeTest.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,7 +54,7 @@
       <recent name="D:\Projects\system_architecture\Homework\CLI\CLI\src\main\java" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AssignTest">
+  <component name="RunManager" selected="JUnit.PipeTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="CLI" />
@@ -55,50 +62,65 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AssignTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PipeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CLI" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="AssignTest" />
+      <option name="MAIN_CLASS_NAME" value="PipeTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AssignTest.testSimpleAssignNumber" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PipeTest.simpleTestWithPipeAndExit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CLI" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="AssignTest" />
-      <option name="METHOD_NAME" value="testSimpleAssignNumber" />
+      <option name="MAIN_CLASS_NAME" value="PipeTest" />
+      <option name="METHOD_NAME" value="simpleTestWithPipeAndExit" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PipeTest.simpleTestWithTwoPipesAndExit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CLI" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CommandTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="PipeTest" />
+      <option name="METHOD_NAME" value="simpleTestWithTwoPipesAndExit" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ParserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PipeTest.simpleTestWithTwoPipesAndWC" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CLI" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ParserTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="PipeTest" />
+      <option name="METHOD_NAME" value="simpleTestWithTwoPipesAndWC" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="CLI" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="CLI" />
+      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AssignTest" />
-        <item itemvalue="JUnit.ParserTest" />
+        <item itemvalue="JUnit.PipeTest" />
+        <item itemvalue="JUnit.PipeTest.simpleTestWithTwoPipesAndWC" />
+        <item itemvalue="JUnit.PipeTest.simpleTestWithTwoPipesAndExit" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.AssignTest.testSimpleAssignNumber" />
-        <item itemvalue="JUnit.CommandTest" />
+        <item itemvalue="JUnit.PipeTest.simpleTestWithPipeAndExit" />
       </list>
     </recent_temporary>
   </component>
