@@ -11,36 +11,36 @@ import static utils.Stack.getStack;
 
 public class PipeTest extends Assert {
 
-    @Test
-    public void simplePipeTest() {
-        getStack().put("example.txt");
-        CommandCat commandA = new CommandCat("cat");
-        commandA.execute();
+//    @Test
+//    public void simplePipeTest() {
+//        getStack().put("example.txt");
+//        CommandCat commandA = new CommandCat("cat");
+//        commandA.execute();
 
-        CommandPipe commandB = new CommandPipe("pipe");
-        commandB.execute();
+//        CommandPipe commandB = new CommandPipe("pipe");
+//        commandB.execute();
 
-        CommandWC commandC = new CommandWC("wc");
-        assert commandC.buildOutput().equals("2 8 0 ");
-    }
+//        CommandWC commandC = new CommandWC("wc");
+//        assert commandC.buildOutput().equals("2 8 0 ");
+//    }
 
-    @Test
-    public void simpleTestWithParse() {
-        CommandFactory factory = new CommandFactory();
-
-        String[] words = Parser.parse("cat example.txt | wc");
-        getStack().putArray(words);
-
-        Command cmdCat = factory.createCommand(getStack().get());
-        cmdCat.execute();
-
-        Command cmdPipe = factory.createCommand(getStack().get());
-        cmdPipe.execute();
-
-        Command cmdWC = factory.createCommand(getStack().get());
-        assert cmdWC.buildOutput().equals("2 8 0 ");
-
-    }
+//    @Test
+//    public void simpleTestWithParse() {
+//        CommandFactory factory = new CommandFactory();
+//
+//        String[] words = Parser.parse("cat example.txt | wc");
+//        getStack().putArray(words);
+//
+//        Command cmdCat = factory.createCommand(getStack().get());
+//        cmdCat.execute();
+//
+//        Command cmdPipe = factory.createCommand(getStack().get());
+//        cmdPipe.execute();
+//
+//        Command cmdWC = factory.createCommand(getStack().get());
+//        assert cmdWC.buildOutput().equals("2 8 0 ");
+//
+//    }
 
     @Test
     public void simpleTestWithPipeAndExit() {
@@ -78,35 +78,35 @@ public class PipeTest extends Assert {
 
     }
 
-    @Test
-    public void simplePythonPipeTest() {
-        getStack().put("main.py");
-        CommandCat commandA = new CommandCat("cat");
-        commandA.execute();
+//    @Test
+//    public void simplePythonPipeTest() {
+//        getStack().put("main.py");
+//        CommandCat commandA = new CommandCat("cat");
+//        commandA.execute();
+//
+//        CommandPipe commandB = new CommandPipe("pipe");
+//        commandB.execute();
+//
+//        CommandWC commandC = new CommandWC("wc");
+//        assert commandC.buildOutput().equals("1 2 0 ");
+//    }
 
-        CommandPipe commandB = new CommandPipe("pipe");
-        commandB.execute();
+//    @Test
+//    public void simpleTestWithOnePipesAndPythonAndExit() {
+//        CommandFactory factory = new CommandFactory();
 
-        CommandWC commandC = new CommandWC("wc");
-        assert commandC.buildOutput().equals("1 2 0 ");
-    }
+//        String[] words = Parser.parse("python main.py | exit");
+//        getStack().putArray(words);
 
-    @Test
-    public void simpleTestWithOnePipesAndPythonAndExit() {
-        CommandFactory factory = new CommandFactory();
+//        Command cmdCat = factory.createCommand(getStack().get());
+//        cmdCat.execute();
 
-        String[] words = Parser.parse("python main.py | exit");
-        getStack().putArray(words);
+//        Command cmdPipe = factory.createCommand(getStack().get());
+//        cmdPipe.execute();
 
-        Command cmdCat = factory.createCommand(getStack().get());
-        cmdCat.execute();
+//        Command cmdExit = factory.createCommand(getStack().get());
+//        assert cmdExit.buildOutput().equals("0");
 
-        Command cmdPipe = factory.createCommand(getStack().get());
-        cmdPipe.execute();
-
-        Command cmdExit = factory.createCommand(getStack().get());
-        assert cmdExit.buildOutput().equals("0");
-
-    }
+//    }
 
 }
