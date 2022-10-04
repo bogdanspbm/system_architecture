@@ -6,7 +6,6 @@ import factory.CommandFactory;
 import org.junit.Assert;
 import org.junit.Test;
 import utils.Parser;
-import utils.Stack;
 
 import static utils.Stack.getStack;
 
