@@ -78,4 +78,17 @@ public class PipeTest extends Assert {
 
     }
 
+    @Test
+    public void simplePythonPipeTest() {
+        getStack().put("main.py");
+        CommandCat commandA = new CommandCat("cat");
+        commandA.execute();
+
+        CommandPipe commandB = new CommandPipe("pipe");
+        commandB.execute();
+
+        CommandWC commandC = new CommandWC("wc");
+        assert commandC.buildOutput().equals("1 2 0 ");
+    }
+
 }

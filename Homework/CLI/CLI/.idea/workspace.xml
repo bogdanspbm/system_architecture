@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b1b997ac-74b6-4d89-9232-89b728f569c1" name="Changes" comment="test parser change">
+    <list default="true" id="b1b997ac-74b6-4d89-9232-89b728f569c1" name="Changes" comment="tests Pipes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/PipeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PipeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/utils/STDIn.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utils/STDIn.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/utils/Stack.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utils/Stack.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/utils/VariableStorage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utils/VariableStorage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PipeTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/PipeTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +50,7 @@
       <recent name="D:\Projects\system_architecture\Homework\CLI\CLI\src\main\java" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PipeTest">
+  <component name="RunManager" selected="JUnit.PipeTest.simplePythonPipeTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="CLI" />
@@ -71,11 +67,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PipeTest.simpleTestWithPipeAndExit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PipeTest.simplePythonPipeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CLI" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="PipeTest" />
-      <option name="METHOD_NAME" value="simpleTestWithPipeAndExit" />
+      <option name="METHOD_NAME" value="simplePythonPipeTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -116,11 +112,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PipeTest.simplePythonPipeTest" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.PipeTest" />
         <item itemvalue="JUnit.PipeTest.simpleTestWithTwoPipesAndWC" />
         <item itemvalue="JUnit.PipeTest.simpleTestWithTwoPipesAndExit" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.PipeTest.simpleTestWithPipeAndExit" />
       </list>
     </recent_temporary>
   </component>
@@ -144,7 +140,21 @@
       <option name="project" value="LOCAL" />
       <updated>1664819464085</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="tests Pipes">
+      <created>1664893307150</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1664893307150</updated>
+    </task>
+    <task id="LOCAL-00003" summary="tests Pipes">
+      <created>1664893331534</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1664893331534</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,7 +201,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test parser change" />
     <MESSAGE value="test Assign" />
-    <option name="LAST_COMMIT_MESSAGE" value="test Assign" />
+    <MESSAGE value="tests Pipes" />
+    <option name="LAST_COMMIT_MESSAGE" value="tests Pipes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
