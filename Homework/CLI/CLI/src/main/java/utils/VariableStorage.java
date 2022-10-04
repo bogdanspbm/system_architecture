@@ -13,6 +13,7 @@ public class VariableStorage {
 
     }
 
+    // Возвращает singleton хранилища переменных
     public static synchronized VariableStorage getStorage() {
         if (singleton == null) {
             singleton = new VariableStorage();
@@ -20,14 +21,18 @@ public class VariableStorage {
         return singleton;
     }
 
+    // Добавляет новую пару ключ значение в хранилище
     public void put(String key, String value) {
         valuesMap.put(key, value);
     }
 
+    // Возвращает значение по ключу
     public String get(String key) {
         return valuesMap.get(key);
     }
 
+
+    // Заменяет в строке все ключи на значения, если они есть
     public String replaceKeys(String str){
 
         if(str.contains("$")){

@@ -53,6 +53,7 @@ public class Stack {
     }
 
 
+    // Возвращает, является ли след. элемент пайпом
     public boolean isNextPipe() {
         return stack.size() > 0 && stack.get(0).equals("|");
     }
