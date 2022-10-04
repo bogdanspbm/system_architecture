@@ -19,16 +19,25 @@ public class CommandAssign extends Command {
 
     @Override
     public String buildOutput() {
-        String[] words = this.name.split("=");
-        String value = "";
 
-        key = words[0];
+        boolean flag = false;
 
-        for(int i = 1; i < words.length;i++){
-            value += words[i];
+        StringBuilder keyBuilder = new StringBuilder();
+        StringBuilder valueBuilder = new StringBuilder();
+
+        for (char ch : name.toCharArray()) {
+            if (ch == '=' && !flag) {
+                flag = true;
+            } else if (!flag) {
+                keyBuilder.append(ch);
+            } else {
+                valueBuilder.append(ch);
+            }
         }
 
-        return value;
+        key = keyBuilder.toString();
+
+        return valueBuilder.toString();
     }
 
     @Override
