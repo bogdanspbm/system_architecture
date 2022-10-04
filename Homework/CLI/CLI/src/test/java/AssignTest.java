@@ -28,7 +28,7 @@ public class AssignTest extends Assert {
         CommandEcho commandValidSimpleLetter = new CommandEcho("echo");
         assert commandValidSimpleLetter.buildOutput().equals("b");
 
-        //!!!!!!!!!!!!!
+
         CommandAssign commandLetterInComa = new CommandAssign(Parser.parse("k=\"b\"")[0]);
         commandLetterInComa.execute();
 
@@ -38,7 +38,7 @@ public class AssignTest extends Assert {
         assert commandValidLetterInComa.buildOutput().equals("b");
 
 
-        //!!!!!!!!!!!! выводит без одинарных кавычек букву b
+
         CommandAssign commandLetterInAloneComa = new CommandAssign(Parser.parse("p='b'")[0]);
         commandLetterInAloneComa.execute();
 
@@ -47,7 +47,7 @@ public class AssignTest extends Assert {
         CommandEcho commandValidLetterInAloneComa = new CommandEcho("echo");
         assert commandValidLetterInAloneComa.buildOutput().equals("b");
 
-        //!!!!!!!!!!!!!!!! в онлайн баше ошибку выводит, у тебя пустоту
+
         CommandAssign commandCharInPipe = new CommandAssign("r=|6|");
         commandCharInPipe.execute();
 
@@ -74,7 +74,7 @@ public class AssignTest extends Assert {
         CommandEcho commandValidSpace = new CommandEcho("echo");
         assert commandValidSpace.buildOutput().equals("");
 
-        //!!!ошибку должен выводить
+
         CommandAssign commandNothingInitials = new CommandAssign("=100");
         commandNothingInitials.execute();
 
