@@ -50,7 +50,7 @@
       <recent name="D:\Projects\system_architecture\Homework\CLI\CLI\src\main\java" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PipeTest.simplePythonPipeTest">
+  <component name="RunManager" selected="JUnit.PipeTest.simpleTestWithOnePipesAndPythonAndExit">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="CLI" />
@@ -77,11 +77,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PipeTest.simpleTestWithTwoPipesAndExit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PipeTest.simpleTestWithOnePipesAndPythonAndExit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CLI" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="PipeTest" />
-      <option name="METHOD_NAME" value="simpleTestWithTwoPipesAndExit" />
+      <option name="METHOD_NAME" value="simpleTestWithOnePipesAndPythonAndExit" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -112,11 +112,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PipeTest.simplePythonPipeTest" />
+        <item itemvalue="JUnit.PipeTest.simpleTestWithOnePipesAndPythonAndExit" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.PipeTest.simplePythonPipeTest" />
         <item itemvalue="JUnit.PipeTest" />
         <item itemvalue="JUnit.PipeTest.simpleTestWithTwoPipesAndWC" />
-        <item itemvalue="JUnit.PipeTest.simpleTestWithTwoPipesAndExit" />
       </list>
     </recent_temporary>
   </component>

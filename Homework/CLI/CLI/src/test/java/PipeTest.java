@@ -91,4 +91,22 @@ public class PipeTest extends Assert {
         assert commandC.buildOutput().equals("1 2 0 ");
     }
 
+    @Test
+    public void simpleTestWithOnePipesAndPythonAndExit() {
+        CommandFactory factory = new CommandFactory();
+
+        String[] words = Parser.parse("python main.py | exit");
+        getStack().putArray(words);
+
+        Command cmdCat = factory.createCommand(getStack().get());
+        cmdCat.execute();
+
+        Command cmdPipe = factory.createCommand(getStack().get());
+        cmdPipe.execute();
+
+        Command cmdExit = factory.createCommand(getStack().get());
+        assert cmdExit.buildOutput().equals("0");
+
+    }
+
 }
