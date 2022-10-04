@@ -1,6 +1,7 @@
 import commands.*;
 import org.junit.Assert;
 import org.junit.Test;
+import utils.Parser;
 
 
 import static utils.Stack.getStack;
@@ -28,7 +29,7 @@ public class AssignTest extends Assert {
         assert commandValidSimpleLetter.buildOutput().equals("b");
 
         //!!!!!!!!!!!!!
-        CommandAssign commandLetterInComa = new CommandAssign("k=\"b\"");
+        CommandAssign commandLetterInComa = new CommandAssign(Parser.parse("k=\"b\"")[0]);
         commandLetterInComa.execute();
 
         getStack().put("$k");
@@ -38,7 +39,7 @@ public class AssignTest extends Assert {
 
 
         //!!!!!!!!!!!! выводит без одинарных кавычек букву b
-        CommandAssign commandLetterInAloneComa = new CommandAssign("p='b'");
+        CommandAssign commandLetterInAloneComa = new CommandAssign(Parser.parse("p='b'")[0]);
         commandLetterInAloneComa.execute();
 
         getStack().put("$p");
@@ -80,7 +81,7 @@ public class AssignTest extends Assert {
         getStack().put("$");
 
         CommandEcho commandValidNothingInitials = new CommandEcho("echo");
-        assert commandValidNothingInitials.buildOutput().equals("");
+        assert commandValidNothingInitials.buildOutput().equals("$");
 
     }
 
