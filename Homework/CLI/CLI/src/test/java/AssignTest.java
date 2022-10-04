@@ -27,14 +27,15 @@ public class AssignTest extends Assert {
         CommandEcho commandValidSimpleLetter = new CommandEcho("echo");
         assert commandValidSimpleLetter.buildOutput().equals("b");
 
-
+        //!!!!!!!!!!!!!
         CommandAssign commandLetterInComa = new CommandAssign("k=\"b\"");
         commandLetterInComa.execute();
 
         getStack().put("$k");
 
         CommandEcho commandValidLetterInComa = new CommandEcho("echo");
-        assert commandValidLetterInComa.buildOutput().equals("\"b\"");
+        assert commandValidLetterInComa.buildOutput().equals("b");
+
 
         //!!!!!!!!!!!! выводит без одинарных кавычек букву b
         CommandAssign commandLetterInAloneComa = new CommandAssign("p='b'");
@@ -43,9 +44,9 @@ public class AssignTest extends Assert {
         getStack().put("$p");
 
         CommandEcho commandValidLetterInAloneComa = new CommandEcho("echo");
-        assert commandValidLetterInAloneComa.buildOutput().equals("'b'");
+        assert commandValidLetterInAloneComa.buildOutput().equals("b");
 
-        //!!!!!!!!!!!!!!!! вообще ничего не выводит у тебя
+        //!!!!!!!!!!!!!!!! в онлайн баше ошибку выводит, у тебя пустоту
         CommandAssign commandCharInPipe = new CommandAssign("r=|6|");
         commandCharInPipe.execute();
 
@@ -54,14 +55,14 @@ public class AssignTest extends Assert {
         CommandEcho commandValidCharInPipe = new CommandEcho("echo");
         assert commandValidCharInPipe.buildOutput().equals("|6|");
 
-        //!!!!!!!!!!!!!!! вместо =6 тупо присваивает шестерку переменной)
+
         CommandAssign commandEqualsUnderComas = new CommandAssign("t=\"=6\"");
         commandEqualsUnderComas.execute();
 
         getStack().put("$t");
 
         CommandEcho commandValidEqualsUnderComas = new CommandEcho("echo");
-        assert commandValidEqualsUnderComas.buildOutput().equals("\"6\"");
+        assert commandValidEqualsUnderComas.buildOutput().equals("\"=6\"");
 
 
         CommandAssign commandSpace = new CommandAssign("l=");
@@ -72,14 +73,14 @@ public class AssignTest extends Assert {
         CommandEcho commandValidSpace = new CommandEcho("echo");
         assert commandValidSpace.buildOutput().equals("");
 
-
+        //!!!ошибку должен выводить
         CommandAssign commandNothingInitials = new CommandAssign("=100");
         commandNothingInitials.execute();
 
         getStack().put("$");
 
         CommandEcho commandValidNothingInitials = new CommandEcho("echo");
-        assert commandValidNothingInitials.buildOutput().equals("100");
+        assert commandValidNothingInitials.buildOutput().equals("");
 
     }
 
