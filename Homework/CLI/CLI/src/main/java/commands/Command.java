@@ -4,17 +4,25 @@ import utils.STDIn;
 import utils.Stack;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import static utils.Stack.getStack;
 
 public abstract class Command {
 
+    private int optionsToAdd = 0;
+
     String name = "";
     List<String> params = new ArrayList<>();
+    List<String> options = new ArrayList<>();
+
+    Map<String, Integer> optionMap = new HashMap<>();
 
     public Command(String name) {
         this.name = name;
+        generateOptionsMap();
         readParams();
     }
 
@@ -40,23 +48,49 @@ public abstract class Command {
     // 0 - inf - точное количество
     public abstract int getParamsCount();
 
+    protected void generateOptionsMap() {
+
+    }
+
     private void readParams() {
         Stack stack = getStack();
         STDIn stdin = STDIn.getSTDIn();
 
+        String param = "";
+
         if (getParamsCount() != -1) {
             int i = 0;
             for (; i < getParamsCount() && stack.hasNext(); i++) {
-                params.add(stack.get());
+                param = stack.get();
+                i = addParamOrOption(param, i);
             }
             for (; i < getParamsCount() && stdin.hasNext(); i++) {
-                params.add(stdin.get());
+                param = stdin.get();
+                i = addParamOrOption(param, i);
             }
         } else {
             while (stack.hasNextParam()) {
-                String param = stack.get();
+                param = stack.get();
                 params.add(param);
             }
         }
+    }
+
+    private int addParamOrOption(String param, int i) {
+        if (param.startsWith("-") || optionsToAdd > 0) {
+            i = i - 1;
+
+            if (optionMap.containsKey(param) && optionsToAdd == 0) {
+                optionsToAdd += optionMap.get(param);
+            } else if (optionsToAdd > 0) {
+                optionsToAdd--;
+            }
+
+            options.add(param);
+        } else {
+            params.add(param);
+        }
+
+        return i;
     }
 }

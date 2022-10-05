@@ -22,6 +22,9 @@ public class CommandFactory {
             case "ls": {
                 return new CommandLS(name);
             }
+            case "grep": {
+                return new CommandGrep(name);
+            }
             case "exit": {
                 return new CommandExit(name);
             }

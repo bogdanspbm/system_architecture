@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b1b997ac-74b6-4d89-9232-89b728f569c1" name="Changes" comment="tests Pipes final">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/PipeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PipeTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="b1b997ac-74b6-4d89-9232-89b728f569c1" name="Changes" comment="tests Pipes final" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,7 +47,14 @@
       <recent name="D:\Projects\system_architecture\Homework\CLI\CLI\src\main\java" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PipeTest">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="CLI" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AssignTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CLI" />
       <option name="PACKAGE_NAME" value="" />
@@ -78,16 +82,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PipeTest.simplePythonPipeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CLI" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PipeTest" />
-      <option name="METHOD_NAME" value="simplePythonPipeTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="PipeTest.simpleTestWithPipeAndExit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CLI" />
       <option name="PACKAGE_NAME" value="" />
@@ -98,26 +92,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="CLI" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="CLI" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.PipeTest" />
         <item itemvalue="JUnit.ParserTest" />
         <item itemvalue="JUnit.AssignTest" />
         <item itemvalue="JUnit.PipeTest.simpleTestWithPipeAndExit" />
-        <item itemvalue="JUnit.PipeTest.simplePythonPipeTest" />
       </list>
     </recent_temporary>
   </component>
@@ -133,6 +114,7 @@
       <workItem from="1664355915476" duration="2687000" />
       <workItem from="1664797521984" duration="4825000" />
       <workItem from="1664869929867" duration="401000" />
+      <workItem from="1664981130323" duration="7951000" />
     </task>
     <task id="LOCAL-00001" summary="test parser change">
       <created>1664819464085</created>
@@ -235,9 +217,19 @@
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/utils/Reader.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="13" />
+          <url>file://$PROJECT_DIR$/src/main/java/commands/CommandGrep.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/commands/CommandGrep.java</url>
+          <line>71</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/commands/CommandGrep.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
