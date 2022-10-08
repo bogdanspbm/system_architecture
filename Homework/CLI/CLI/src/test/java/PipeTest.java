@@ -24,23 +24,23 @@ public class PipeTest extends Assert {
 //        assert commandC.buildOutput().equals("2 8 0 ");
 //    }
 
-//    @Test
-//    public void simpleTestWithParse() {
-//        CommandFactory factory = new CommandFactory();
-//
-//        String[] words = Parser.parse("cat example.txt | wc");
-//        getStack().putArray(words);
-//
-//        Command cmdCat = factory.createCommand(getStack().get());
-//        cmdCat.execute();
-//
-//        Command cmdPipe = factory.createCommand(getStack().get());
-//        cmdPipe.execute();
-//
-//        Command cmdWC = factory.createCommand(getStack().get());
-//        assert cmdWC.buildOutput().equals("2 8 0 ");
-//
-//    }
+    @Test
+    public void simpleTestWithParse() {
+        CommandFactory factory = new CommandFactory();
+
+        String[] words = Parser.parse("cat example.txt | wc");
+        getStack().putArray(words);
+
+        Command cmdCat = factory.createCommand(getStack().get());
+        cmdCat.execute();
+
+        Command cmdPipe = factory.createCommand(getStack().get());
+        cmdPipe.execute();
+
+        Command cmdWC = factory.createCommand(getStack().get());
+        assert cmdWC.buildOutput().equals("2 8 0 ");
+
+    }
 
     @Test
     public void simpleTestWithPipeAndExit() {
