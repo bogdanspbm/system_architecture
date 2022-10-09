@@ -76,12 +76,37 @@ public abstract class Command {
         }
     }
 
+    private boolean tryExtractMergedOption(String param) {
+        int valueIndex = -1;
+        for (int i = 0; i < param.length(); i++) {
+            try {
+                Integer.parseInt(param.substring(i));
+                valueIndex = i;
+                break;
+            } catch (Exception e) {
+
+            }
+        }
+
+        if (valueIndex != -1) {
+            if (optionMap.containsKey(param.substring(0, valueIndex))) {
+                options.add(param.substring(0, valueIndex));
+                options.add(param.substring(valueIndex));
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     private int addParamOrOption(String param, int i) {
         if (param.startsWith("-") || optionsToAdd > 0) {
             i = i - 1;
 
             if (optionMap.containsKey(param) && optionsToAdd == 0) {
                 optionsToAdd += optionMap.get(param);
+            } else if (tryExtractMergedOption(param)) {
+                return i;
             } else if (optionsToAdd > 0) {
                 optionsToAdd--;
             }
