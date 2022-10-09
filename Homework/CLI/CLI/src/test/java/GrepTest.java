@@ -150,7 +150,7 @@ public class GrepTest extends Assert {
 
         Command cmdGreepWithFewRows = factory.createCommand(getStack().get());
 
-        assert (cmdGreepWithFewRows.buildOutput()).equals("приходи с друзьями | родителями\nкупи 2 квас\nточка\n");
+        assert (cmdGreepWithFewRows.buildOutput()).equals("да выпей чаю\nпопробуй новое предложение\nкупи \"квас\"\nприходи с друзьями | родителями\n");
 
         String[] wordsWithFewRowsAfterLastRow = Parser.parse("grep -A10 \"крутой\" exampleSecond.txt");
         getStack().putArray(wordsWithFewRowsAfterLastRow);
