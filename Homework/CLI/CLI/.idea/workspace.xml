@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b1b997ac-74b6-4d89-9232-89b728f569c1" name="Changes" comment="example2" />
+    <list default="true" id="b1b997ac-74b6-4d89-9232-89b728f569c1" name="Changes" comment="new example for grep tests">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exampleSecond.txt" beforeDir="false" afterPath="$PROJECT_DIR$/exampleSecond.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/GrepTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GrepTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PipeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PipeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/PipeTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/PipeTest.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,33 +55,39 @@
       <recent name="D:\Projects\system_architecture\Homework\CLI\CLI\src\main\java" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PipeTest.simpleTestWithParse">
-    <configuration name="AssignTest " type="JUnit" factoryName="JUnit" temporary="true">
+  <component name="RunManager" selected="JUnit.GrepTest">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="CLI" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GrepTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CLI" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="AssignTest" />
-      <option name="METHOD_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GrepTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GrepTest.testOnGrepWitFlagsAndPipeExit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CLI" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CommandTest" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="GrepTest" />
+      <option name="METHOD_NAME" value="testOnGrepWitFlagsAndPipeExit" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ParserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GrepTest.testOnGrepWithFlagA" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CLI" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ParserTest" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="GrepTest" />
+      <option name="METHOD_NAME" value="testOnGrepWithFlagA" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -85,16 +97,6 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="PipeTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PipeTest.simpleTestWithParse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CLI" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PipeTest" />
-      <option name="METHOD_NAME" value="simpleTestWithParse" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -114,11 +116,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PipeTest.simpleTestWithParse" />
+        <item itemvalue="JUnit.GrepTest" />
         <item itemvalue="JUnit.PipeTest" />
-        <item itemvalue="JUnit.ParserTest (1)" />
-        <item itemvalue="JUnit.CommandTest" />
-        <item itemvalue="JUnit.AssignTest " />
+        <item itemvalue="JUnit.GrepTest.testOnGrepWitFlagsAndPipeExit" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.GrepTest.testOnGrepWithFlagA" />
       </list>
     </recent_temporary>
   </component>
@@ -178,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665236154467</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="new example for grep tests">
+      <created>1665236543859</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1665236543859</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,7 +243,8 @@
     <MESSAGE value="tests Pipes comments" />
     <MESSAGE value="tests Pipes final" />
     <MESSAGE value="example2" />
-    <option name="LAST_COMMIT_MESSAGE" value="example2" />
+    <MESSAGE value="new example for grep tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="new example for grep tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -243,11 +253,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/commands/CommandAssign.java</url>
           <line>49</line>
           <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/utils/Stack.java</url>
-          <line>39</line>
-          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
