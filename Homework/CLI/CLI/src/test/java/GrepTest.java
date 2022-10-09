@@ -177,7 +177,7 @@ public class GrepTest extends Assert {
 
         Command cmdGreep = factory.createCommand(getStack().get());
 
-        assert (cmdGreep.buildOutput()).equals("купи \"квас\"\nприходи с друзьями | родителями\nкупи 2 квас\n");
+        assert (cmdGreep.buildOutput()).equals("купи \"квас\"\nприходи с друзьями | родителями\nкупи 2 квас\nточка\nкрутой Ривер\n");
 
         String[] wordsFlagsAIWSmallRegister = Parser.parse("grep  -A2 -i -w  \"Новое\"  exampleSecond.txt");
         getStack().putArray(wordsFlagsAIWSmallRegister);
