@@ -42,6 +42,41 @@ public class PipeTest extends Assert {
 
     }
 
+    @Test
+    public void simplePythonPipeTest() {
+        getStack().put("main.py");
+        CommandCat commandA = new CommandCat("cat");
+        commandA.execute();
+
+        CommandPipe commandB = new CommandPipe("pipe");
+        commandB.execute();
+
+        CommandWC commandC = new CommandWC("wc");
+        assert commandC.buildOutput().equals("1 2 0 ");
+    }
+
+    @Test
+    public void simpleTestWithParseCatAndEcho() {
+        CommandFactory factory = new CommandFactory();
+
+        String[] words = Parser.parse("cat example.txt | echo \"4\"");
+        getStack().putArray(words);
+
+        Command cmdCat = factory.createCommand(getStack().get());
+        cmdCat.execute();
+
+        Command cmdPipe = factory.createCommand(getStack().get());
+        cmdPipe.execute();
+
+        Command cmdWC = factory.createCommand(getStack().get());
+        assert cmdWC.buildOutput().equals("4");
+
+    }
+
+/**
+    These tests are not working in whole file, cause each one of them considers CLI command "exit" with pipes and
+    others CLI command. Nevertheless, individually they work.
+*/
 //    @Test
 //    public void simpleTestWithPipeAndExit() {
 //        CommandFactory factory = new CommandFactory();
@@ -78,16 +113,4 @@ public class PipeTest extends Assert {
 
 //    }
 
-    @Test
-    public void simplePythonPipeTest() {
-        getStack().put("main.py");
-        CommandCat commandA = new CommandCat("cat");
-        commandA.execute();
-
-        CommandPipe commandB = new CommandPipe("pipe");
-        commandB.execute();
-
-        CommandWC commandC = new CommandWC("wc");
-        assert commandC.buildOutput().equals("1 2 0 ");
-    }
 }
