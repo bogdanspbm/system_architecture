@@ -186,12 +186,12 @@ public class GrepTest extends Assert {
 
         assert (cmdGreepFlagsAIWSmallRegister.buildOutput()).equals("попробуй новое предложение\nкупи \"квас\"\nприходи с друзьями | родителями\n");
 
-        String[] wordsFlagsIWWithDuplicateInText = Parser.parse("grep  -i  -w  \"купи\"  Untitled1.txt");
+        String[] wordsFlagsIWWithDuplicateInText = Parser.parse("grep  -i  -w  \"купи\"  exampleSecond.txt");
         getStack().putArray(wordsFlagsIWWithDuplicateInText);
 
         Command cmdGreepFlagsIWWithDuplicateInText = factory.createCommand(getStack().get());
 
-        assert (cmdGreepFlagsIWWithDuplicateInText.buildOutput()).equals("купи \"квас\"купи 2 квас\n");
+        assert (cmdGreepFlagsIWWithDuplicateInText.buildOutput()).equals("купи \"квас\"\nкупи 2 квас\n");
 
         String[] wordsFlagsAWConcatenation = Parser.parse("grep  -A3w  \"этих\"  exampleSecond.txt");
         getStack().putArray(wordsFlagsAWConcatenation);
