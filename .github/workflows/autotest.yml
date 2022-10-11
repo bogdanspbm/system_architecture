@@ -5,7 +5,7 @@ name: Java CI with Maven
 
 on:
   push:
-    branches: [ "CLI", "CLI_Step_B" ]
+    branches: [ "CLI", "CLI_Step_B", "CLI_Grep" ]
 
 jobs:
   build:
