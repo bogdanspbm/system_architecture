@@ -1,6 +1,7 @@
 ## Реализация CLI 
 Реализовация первой части архитектуры Command-Line Interface из домашней работы 1, связанную с поддержкой Read-Execute-Print Loop и команд. 
 
+![example workflow](https://github.com/bogdanspbm/system_architecture/actions/workflows/autotest.yml/badge.svg)
 
 ### Архитектура
 
