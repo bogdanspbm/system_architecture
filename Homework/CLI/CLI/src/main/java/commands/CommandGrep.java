@@ -29,6 +29,10 @@ public class CommandGrep extends Command {
     public String buildOutput() {
         String result = "";
 
+        if(checkHasBadOption()){
+            return "";
+        }
+
         List<Integer> linesInicies = new ArrayList<>();
 
         setSpecificWord();
@@ -70,6 +74,18 @@ public class CommandGrep extends Command {
             }
         }
         return result;
+    }
+
+    private boolean checkHasBadOption() {
+        for (String option : options) {
+            if (option.startsWith("-")) {
+                if (!optionMap.containsKey(option)) {
+                        return true;
+                }
+            }
+        }
+
+        return false;
     }
 
 
