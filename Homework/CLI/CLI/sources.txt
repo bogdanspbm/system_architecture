@@ -9,6 +9,7 @@
 ./src/main/java/commands/CommandWC.java
 ./src/main/java/commands/CommandAssign.java
 ./src/main/java/commands/CommandPipe.java
+./src/main/java/commands/CommandGrep.java
 ./src/main/java/factory/CommandFactory.java
 ./src/main/java/global/GlobalFunctions.java
 ./src/main/java/global/SharedVariables.java
