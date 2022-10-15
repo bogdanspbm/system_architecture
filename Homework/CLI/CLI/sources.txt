@@ -22,5 +22,3 @@
 ./src/main/java/utils/STDIn.java
 ./src/main/java/utils/VariableStorage.java
 ./src/main/java/utils/Stack.java
-
-./src/test/java/AssignTest.java

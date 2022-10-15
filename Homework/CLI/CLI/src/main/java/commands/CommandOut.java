@@ -29,7 +29,6 @@ public class CommandOut extends Command {
 
         try {
             StringBuilder result = new StringBuilder();
-            System.out.println(command.toString());
             Process p = Runtime.getRuntime().exec(command.toString());
             BufferedReader in = new BufferedReader(new InputStreamReader(p.getInputStream()));
             for (String line : in.lines().toList()) {
