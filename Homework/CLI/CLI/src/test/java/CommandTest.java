@@ -86,9 +86,6 @@ public class CommandTest extends Assert {
         stack.put("bad.txt");
         CommandCat commandB = new CommandCat("cat");
         assert commandB.buildOutput().equals("File doesn't exist");
-
-        CommandCat commandC = new CommandCat("cat");
-        assert commandC.buildOutput().equals("Wrong argument");
     }
 
     @Test
