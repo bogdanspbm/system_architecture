@@ -34,12 +34,8 @@ public class Reader {
                   System.out.println(e.getMessage());
                 } catch (NotADirectoryException e) {
                   System.out.println(e.getMessage());
-                } catch (Exception e) {
-                  System.out.println(e.getMessage());
                 }
             }
         }
     }
-
-
 }
