@@ -9,7 +9,6 @@ public class VariableStorage {
     private Map<String, String> valuesMap = new HashMap<>();
 
     private final static String HOME_VARIABLE_NAME = "HOME";
-    private final static String CURRENT_DIRECTORY_VARIABLE_NAME = "PWD";
 
     VariableStorage() {
         initializeDefaultVariables();
@@ -33,6 +32,7 @@ public class VariableStorage {
         return valuesMap.get(key);
     }
 
+    // Возвращает истинное значение тогда и только года, когда valuesMap содержит ключ key. 
     public boolean hasKey(String key) {
       return valuesMap.containsKey(key);
     }
@@ -65,6 +65,5 @@ public class VariableStorage {
 
     private void initializeDefaultVariables() {
       valuesMap.put(HOME_VARIABLE_NAME, System.getProperty("user.home"));
-      valuesMap.put(CURRENT_DIRECTORY_VARIABLE_NAME, System.getProperty("user.dir"));
     }
 }
