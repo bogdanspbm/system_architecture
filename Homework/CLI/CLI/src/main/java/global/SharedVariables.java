@@ -13,4 +13,7 @@ public class SharedVariables {
         return curPath;
     }
 
+    public static void setCurPath(String value) {
+        curPath = value;
+    }
 }

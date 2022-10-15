@@ -4,13 +4,15 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class VariableStorage {
-
     private static VariableStorage singleton;
 
     private Map<String, String> valuesMap = new HashMap<>();
 
-    private VariableStorage() {
+    private final static String HOME_VARIABLE_NAME = "HOME";
+    private final static String CURRENT_DIRECTORY_VARIABLE_NAME = "PWD";
 
+    VariableStorage() {
+        initializeDefaultVariables();
     }
 
     // Возвращает singleton хранилища переменных
@@ -31,6 +33,9 @@ public class VariableStorage {
         return valuesMap.get(key);
     }
 
+    public boolean hasKey(String key) {
+      return valuesMap.containsKey(key);
+    }
 
     // Заменяет в строке все ключи на значения, если они есть
     public String replaceKeys(String str){
@@ -58,4 +63,8 @@ public class VariableStorage {
         }
     }
 
+    private void initializeDefaultVariables() {
+      valuesMap.put(HOME_VARIABLE_NAME, System.getProperty("user.home"));
+      valuesMap.put(CURRENT_DIRECTORY_VARIABLE_NAME, System.getProperty("user.dir"));
+    }
 }

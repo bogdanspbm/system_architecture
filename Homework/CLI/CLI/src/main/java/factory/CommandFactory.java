@@ -28,6 +28,9 @@ public class CommandFactory {
             case "exit": {
                 return new CommandExit(name);
             }
+            case "cd": {
+              return new CommandCD(name);
+            }
             case "|": {
                 return new CommandPipe(name);
             }

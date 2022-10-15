@@ -2,6 +2,8 @@ package utils;
 
 import commands.Command;
 import factory.CommandFactory;
+import global.exceptions.FileNotFoundException;
+import global.exceptions.NotADirectoryException;
 
 import java.util.Scanner;
 
@@ -26,7 +28,15 @@ public class Reader {
             getStack().putArray(Parser.parse(lastLine));
             while (getStack().hasNext()) {
                 Command cmd = factory.createCommand(getStack().get());
-                cmd.execute();
+                try {
+                    cmd.execute();
+                } catch (FileNotFoundException e) {
+                  System.out.println(e.getMessage());
+                } catch (NotADirectoryException e) {
+                  System.out.println(e.getMessage());
+                } catch (Exception e) {
+                  System.out.println(e.getMessage());
+                }
             }
         }
     }
