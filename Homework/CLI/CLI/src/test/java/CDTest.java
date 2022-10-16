@@ -31,6 +31,8 @@ public class CDTest extends Assert {
 
         assert command.buildOutput().equals("");
         assert SharedVariables.getCurPath().equals(storage.get("HOME"));
+
+        resetState();
     }
 
     @Test
@@ -49,6 +51,8 @@ public class CDTest extends Assert {
       command.execute();
 
       assert SharedVariables.getCurPath().equals(file.getAbsolutePath());
+
+      resetState();
     }
 
     @Test(expected = FileNotFoundException.class)
@@ -62,5 +66,11 @@ public class CDTest extends Assert {
 
       Command command = factory.createCommand(getStack().get());
       command.execute();
+
+      resetState();
+    }
+
+    private void resetState() {
+        SharedVariables.setCurPath("");
     }
 }
