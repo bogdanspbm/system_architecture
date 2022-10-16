@@ -54,23 +54,6 @@ public class CommandTest extends Assert {
     }
 
     @Test
-    public void testLSCommand() {
-        CommandLS command = new CommandLS("ls");
-        String output = command.buildOutput();
-        String[] fileNames = output.split("\n");
-
-        File curDir = new File(System.getProperty("user.dir"));
-
-        File[] files = curDir.listFiles();
-
-        assert files.length == fileNames.length;
-
-        for (int i = 0; i < files.length; i++) {
-            assert files[i].getName().equals(fileNames[i]);
-        }
-    }
-
-    @Test
     public void testCatCommand() {
         Stack stack = getStack();
 
