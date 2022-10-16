@@ -7,11 +7,10 @@ import java.nio.file.Paths;
 import java.nio.file.Path;
 import java.io.File;
 
+/** Class that represents ls command.*/
 public class CommandLS extends Command {
     public CommandLS(String name) {
         super(name);
-
-
     }
 
     @Override
@@ -68,15 +67,12 @@ public class CommandLS extends Command {
                 }
                 folders.append("\n\n");
             }
-
         }
 
         if (files.length() != 0)
             files.append("\n\n");
         if (folders.length() != 0)
-        {  
             folders.deleteCharAt(folders.length() - 1);
-        }
         return errors.append(files).append(folders).toString();
     }
 
