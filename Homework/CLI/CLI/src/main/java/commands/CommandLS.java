@@ -37,8 +37,13 @@ public class CommandLS extends Command {
 
         for (String fileName : params)
         {
-            String fileNameAbsolute = Paths.get(SharedVariables.getCurPath(), fileName).toString();
-            Path filePath = Paths.get(fileNameAbsolute);
+            Path filePath = Paths.get(fileName);
+            String fileNameAbsolute = filePath.toString();
+            if (!filePath.isAbsolute()) 
+            {
+                fileNameAbsolute = Paths.get(SharedVariables.getCurPath(), fileName).toString();
+                filePath = Paths.get(fileNameAbsolute);
+            }
             if (!Files.exists(filePath))
             {
                 errors.append(String.format("ls: cannot access '%s': No such file or directory\n", fileName));
