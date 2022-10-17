@@ -35,7 +35,7 @@ public class CommandCD extends Command {
       if (this.path == null && !variableStorage.hasKey("HOME")) {
           // POSIX defines undefined behaviour, we prefer to simply skip.
       } else if (this.path == null) {
-          updateCurrentPath(variableStorage.get("HOME"));
+          updateCurrentPath(Paths.get(variableStorage.get("HOME")));
       } else {
         Path targetPath = this.targetPath();
         File f = new File(targetPath.toString());
@@ -46,7 +46,7 @@ public class CommandCD extends Command {
             throw new NotADirectoryException(this.name, this.path);
         }
 
-        updateCurrentPath(targetPath().toString());
+        updateCurrentPath(targetPath());
       }
     }
 
@@ -64,8 +64,8 @@ public class CommandCD extends Command {
       }
     }
 
-    private void updateCurrentPath(String path) {
-      SharedVariables.setCurPath(path);
+    private void updateCurrentPath(Path path) {
+      SharedVariables.setCurPath(path.normalize().toString());
     }
 
     @Override
