@@ -8,6 +8,7 @@ import utils.Stack;
 import java.io.File;
 
 import static utils.Stack.getStack;
+import utils.STDIn;
 
 
 public class CommandTest extends Assert {
@@ -88,6 +89,9 @@ public class CommandTest extends Assert {
         stack.put("bad.txt");
         CommandWC commandB = new CommandWC("wc");
         assert commandB.buildOutput().equals("1 1 0 ");
+
+        STDIn.getSTDIn().clear(); // Make sure next command will get no params
+                                  // It occurs STDIn can be nonempty depending on test order
 
         CommandWC commandC = new CommandWC("cat");
         assert commandC.buildOutput().equals("Wrong argument");
