@@ -54,6 +54,8 @@ public class LSTest extends Assert {
             assert fileNames.contains(files[i].getName());
             fileNames.remove(files[i].getName());
         }
+
+        resetState();
     }
 
     @Test
@@ -168,7 +170,6 @@ public class LSTest extends Assert {
                                               
         String actualOutput = commandLS.buildOutput();
         assert equalOutputs(expectedOutput, actualOutput);
-
     }
 
     private boolean equalOutputs(String expectedOutput, String actualOutput)
@@ -191,5 +192,9 @@ public class LSTest extends Assert {
                 return false;
         }
         return true;
+    }
+
+    private void resetState() {
+        SharedVariables.setCurPath("");
     }
 }
