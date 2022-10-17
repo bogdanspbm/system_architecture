@@ -50,13 +50,6 @@ public class CommandLS extends Command {
                 continue;
             }
 
-            if (Files.isRegularFile(filePath))
-            {
-                files.append(fileName);
-                files.append(" ");
-                continue;
-            }
-
             if (Files.isDirectory(filePath))
             {
                 if (params.size() > 1)
@@ -72,12 +65,25 @@ public class CommandLS extends Command {
                 }
                 folders.append("\n\n");
             }
+            else
+            {
+                files.append(fileName);
+                files.append(" ");
+                continue;
+            }
         }
 
+        // make formating similar to UNIX ls 
         if (files.length() != 0)
-            files.append("\n\n");
+        {
+            files.append("\n");
+            if (folders.length() != 0)
+                files.append("\n");
+
+        }
         if (folders.length() != 0)
             folders.deleteCharAt(folders.length() - 1);
+            
         return errors.append(files).append(folders).toString();
     }
 
