@@ -25,7 +25,8 @@ public class Reader {
             lastLine = scan.nextLine();
             getStack().putArray(Parser.parse(lastLine));
             while (getStack().hasNext()) {
-                Command cmd = factory.createCommand(getStack().get());
+                String some = getStack().get();
+                Command cmd = factory.createCommand(some);
                 cmd.execute();
             }
         }

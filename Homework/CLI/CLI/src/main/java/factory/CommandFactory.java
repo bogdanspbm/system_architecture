@@ -1,6 +1,15 @@
 package factory;
 
-import commands.*;
+// import commands.*;
+import commands.Command;
+import commands.CommandCat;
+import commands.CommandCd;
+import commands.CommandEcho;
+import commands.CommandExit;
+import commands.CommandLS;
+import commands.CommandOut;
+import commands.CommandPWD;
+import commands.CommandWC;
 
 public class CommandFactory {
 
@@ -21,6 +30,9 @@ public class CommandFactory {
             }
             case "ls": {
                 return new CommandLS(name);
+            }
+            case "cd": {
+                return new CommandCd(name);
             }
             case "exit": {
                 return new CommandExit(name);

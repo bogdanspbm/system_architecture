@@ -13,4 +13,9 @@ public class SharedVariables {
         return curPath;
     }
 
+    public static void setCurPath(String newPath) {
+        System.setProperty("user.dir", newPath);
+        curPath = newPath;
+    }
+
 }
