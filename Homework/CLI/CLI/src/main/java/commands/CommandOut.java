@@ -2,6 +2,7 @@ package commands;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.stream.Collectors;
 
 public class CommandOut extends Command {
     public CommandOut(String name) {
@@ -31,7 +32,7 @@ public class CommandOut extends Command {
             StringBuilder result = new StringBuilder();
             Process p = Runtime.getRuntime().exec(command.toString());
             BufferedReader in = new BufferedReader(new InputStreamReader(p.getInputStream()));
-            for (String line : in.lines().toList()) {
+            for (String line : in.lines().collect(Collectors.toList())) {
                 result.append(line);
                 result.append("\n");
             }
