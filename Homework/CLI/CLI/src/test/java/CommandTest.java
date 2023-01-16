@@ -6,6 +6,7 @@ import org.junit.Test;
 import utils.Stack;
 
 import java.io.File;
+import java.util.Arrays;
 
 import static utils.Stack.getStack;
 
@@ -62,12 +63,112 @@ public class CommandTest extends Assert {
         File curDir = new File(System.getProperty("user.dir"));
 
         File[] files = curDir.listFiles();
+        File[] filtered = curDir.listFiles(f -> !f.isHidden());
 
-        assert files.length == fileNames.length;
+        assert filtered.length == fileNames.length;
 
-        for (int i = 0; i < files.length; i++) {
-            assert files[i].getName().equals(fileNames[i]);
+        for (int i = 0; i < filtered.length; i++) {
+            assert filtered[i].getName().equals(fileNames[i]);
         }
+    }
+
+    @Test
+    public void testLSCommandAllInfo() { 
+        Stack stack = getStack();
+        stack.put("-a");
+
+        CommandLS cmd = new CommandLS("ls");
+        String output = cmd.buildOutput();
+
+        File curDir = new File(System.getProperty("user.dir"));
+
+        String[] testNames = output.split("\n");
+        String[] trueNames = curDir.list();
+
+        assert trueNames.length == testNames.length;
+
+        for (int i = 0; i < trueNames.length; i++) {
+            assert trueNames[i].equals(testNames[i]);
+        } 
+    }
+
+    @Test
+    public void testLSCommandLocalDir() { 
+        Stack stack = getStack();
+        stack.put("src");
+
+        CommandLS cmd = new CommandLS("ls");
+        String output = cmd.buildOutput();
+
+        String[] testNames = output.split("\n");
+        String[] trueNames = {"main", "test"};
+
+        assert trueNames.length == testNames.length;
+
+        for (int i = 0; i < trueNames.length; i++) {
+            assert trueNames[i].equals(testNames[i]);
+        } 
+    }
+
+    @Test 
+    public void testLSCommandGlobalDir() { 
+        Stack stack = getStack();
+        stack.put("/");
+
+        CommandLS cmd = new CommandLS("ls");
+        String output = cmd.buildOutput();
+
+        File curDir = new File("/"); 
+
+        String[] testNames = output.split("\n");
+        File[] trueNames = curDir.listFiles(f -> !f.isHidden());
+
+        assert trueNames.length == testNames.length;
+
+        for (int i = 0; i < trueNames.length; i++) {
+            assert trueNames[i].getName().equals(testNames[i]);
+        }  
+    }
+
+    @Test
+    public void testLSCommandDirAllInfo() { 
+        Stack stack = getStack();
+        stack.put("/");
+
+        CommandLS cmd = new CommandLS("ls");
+        String output = cmd.buildOutput();
+
+        File curDir = new File("/"); 
+
+        String[] testNames = output.split("\n");
+        String[] trueNames = curDir.list();
+
+        assert trueNames.length == testNames.length;
+
+        for (int i = 0; i < trueNames.length; i++) {
+            assert trueNames[i].equals(testNames[i]);
+        }
+    }
+
+    @Test
+    public void testLSCommandFail() { 
+        Stack stack = getStack();
+        stack.put("unexisting");
+        CommandLS cmd = new CommandLS("ls");
+        String output = cmd.buildOutput();
+        assert output == "Invalid filepath";
+
+        stack.put("-abcd");
+        cmd = new CommandLS("ls");
+        output = cmd.buildOutput();
+        assert output == "Wrong Argument";
+
+        stack.put("this");
+        stack.put("three");
+        stack.put("words");
+        cmd = new CommandLS("ls");
+        output = cmd.buildOutput();
+        assert output == "Wrong Argument"; 
     }
 
     @Test
@@ -111,5 +212,71 @@ public class CommandTest extends Assert {
 
         CommandWC commandC = new CommandWC("cat");
         assert commandC.buildOutput().equals("Wrong argument");
+    }
+
+    @Test
+    public void testCdCommand() { 
+        String startCwd = System.getProperty("user.dir");
+
+        Stack stack = getStack();
+        stack.put("src");
+        CommandCd cmd = new CommandCd("cd");
+        String output = cmd.buildOutput();
+        assert output == "";
+
+        String cwd = System.getProperty("user.dir");
+        assert cwd == (new File(startCwd + "/src")).getAbsolutePath();
+
+        stack.put("..");
+        cmd = new CommandCd("cd");
+        output = cmd.buildOutput();
+        assert output == "";
+
+        cwd = System.getProperty("user.dir");
+        assert cwd == startCwd; 
+    }
+
+    @Test
+    public void testCdCommandHome() { 
+        CommandCd cmd = new CommandCd("cd");
+        String output = cmd.buildOutput();
+        assert output == "";
+
+        String cwd = System.getProperty("user.dir");
+        String home = System.getProperty("user.home");
+        assert cwd == home;
+    }
+
+    @Test
+    public void testCdCommandGlobalDir() { 
+        Stack stack = getStack();
+        stack.put("/"); 
+        CommandCd cmd = new CommandCd("cd");
+        String output = cmd.buildOutput();
+        assert output == "";
+
+        String cwd = System.getProperty("user.dir");
+        assert cwd == "/";
+    }
+
+    @Test
+    public void testCdCommandFail() { 
+        Stack stack = getStack();
+        stack.put("too");  
+        stack.put("many");
+        stack.put("params");
+        CommandCd cmd = new CommandCd("cd");
+        String output = cmd.buildOutput();
+        assert output == "Wrong argument"; 
+
+        stack.put("unexisting");
+        cmd = new CommandCd("cd");
+        output = cmd.buildOutput();
+        assert output == "Directory not found"; 
+
+        stack.put("example.txt");
+        cmd = new CommandCd("cd");
+        output = cmd.buildOutput();
+        assert output == "Not a directory"; 
     }
 }
